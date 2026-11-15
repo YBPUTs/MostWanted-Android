@@ -22,20 +22,6 @@ Garasi: batas nyata 25 mobil (tabel slot part di save hanya 25 entri), tidak bis
 Induction dan Nitrous tetap bergantung pada apakah mobil menerima kitnya.
 Varian D sudah dicoba di Chevrolet Cobalt dan Mazda RX-8: Backroom menampilkan banyak kategori, dan Junkman tidak habis setelah dibeli.
 
-## Cara membuat APK sendiri
-
-1. Ambil APK resmi v1.4.0 dari halaman Releases proyek asli.
-2. Ekstrak `lib/arm64-v8a/libmain.so` dari APK itu.
-3. Jalankan:
-   ```
-   python apply_patch.py libmain.so libmain_patched.so --varian F
-   ```
-   Skrip memeriksa tiap instruksi sebelum mengubahnya. Kalau build berbeda, skrip berhenti tanpa mengubah apa pun.
-4. Ganti file `libmain.so` di dalam APK dengan hasilnya (namanya harus tetap `libmain.so`), lalu tanda tangani ulang APK dengan kunci milikmu sendiri.
-5. Karena tanda tangan berbeda dari APK resmi, hapus instalasi resmi dulu sebelum memasang APK ini. Backup folder `MostWanted/hdd` (save) lebih dulu.
-
-Dites pada `libmain.so` dengan SHA-256 `b94016abbfe99a83f471e9322f3b7a62bfa0e95d9e34ee58a4300381d2d5bdd1`.
-
 ## Batasan yang diketahui
 
 - Ini patch biner pada kode hasil rekompilasi, bukan perubahan di source. Hanya berlaku untuk build yang instruksinya sama.
